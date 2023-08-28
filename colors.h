@@ -1,3 +1,8 @@
+/*!
+\file
+\brief Header файл с библиотекой цветов, использующихся для вывода
+*/
+
 #ifndef COLORS_H_INCLUDED
 #define COLORS_H_INCLUDED
 
@@ -11,4 +16,5 @@
 #define WHITE       "\033[1;37m"
 #define RESET_COLOR "\033[1;0m"
 
+//#define BLACK_STR(str) BLACK str RESET
 #endif // COLORS_H_INCLUDED

@@ -6,8 +6,8 @@
 #include "SquareSolver.h"
 
 void test()
-{
-    const char file_name[50] = "data.txt";
+{//argc argv
+    const char file_name[] = "data.txt";
 
     FILE * file_pointer = check_isopen (file_name);
 
@@ -64,7 +64,7 @@ solutions read_test (double coefficients[], double * x_1_correct, double * x_2_c
 
     fscanf(file_pointer, " COEFF %lg%lg%lg", &coefficients[0], &coefficients[1], &coefficients[2]);
     fscanf(file_pointer, " ROOTS %lg%lg", x_1_correct, x_2_correct);
-    fscanf(file_pointer, " SOLUTIONS %d", &number_solutions_correct);
+    fscanf(file_pointer, " SOLUTIONS %d", (int*)&number_solutions_correct);
 
     return number_solutions_correct;
 }

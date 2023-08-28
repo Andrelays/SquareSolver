@@ -14,7 +14,7 @@ bool check_zero (double number) // TODO bool-
     return (fabs (number) < NEAR_ZERO);
 }
 
-int compare_number (double number_1, double number_2)
+enum compare compare_number (double number_1, double number_2)
 {
     if ((isnan (number_1) && !isnan (number_2)) || (!isnan (number_1) && isnan (number_2)))
         return NOT_COMPARE;

@@ -6,7 +6,7 @@
 #include "SquareSolver.h"
 
 //#define _TX_ALLOW_TRACE 9
-#define TEST // -DTEST
+//#define TEST // -DTEST
 
 /*!
 Основная программа. Решает во время компиляции, в каком режиме запускаться.

@@ -3,7 +3,7 @@
 \brief Файл с функциями, использующимися для вывода корней квадратного уравнения
 */
 
-#include "SquareSolver.h"
+#include "square_solver.h"
 
 void output_data (double x_1, double x_2, enum solutions number_solutions)
 {

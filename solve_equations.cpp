@@ -4,7 +4,7 @@
 \brief Файл с функциями, испоьзующимися для нахождения корней квадратного уравнения
 */
 
-#include "SquareSolver.h"
+#include "square_solver.h"
 
 solutions solve_equasion (const double coefficients[], double * x_1, double * x_2)
 {

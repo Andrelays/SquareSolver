@@ -3,7 +3,7 @@
 \brief Файл с утилитами, используемыми в программе
 */
 
-#include "SquareSolver.h"
+#include "square_solver.h"
 
 bool check_zero (double number)
 {

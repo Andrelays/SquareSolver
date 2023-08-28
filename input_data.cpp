@@ -3,7 +3,7 @@
 \brief Файл с функциями, использующимися для ввода коэффицентов квадратного уравнения
 */
 
-#include "SquareSolver.h"
+#include "square_solver.h"
 
 void input_data (double coefficients[])
 {

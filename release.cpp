@@ -3,7 +3,7 @@
 \brief Файл с функцией, release, которая выполняется в случае, если отключен режим TEST
 */
 
-#include "SquareSolver.h"
+#include "square_solver.h"
 
 void release()
 {

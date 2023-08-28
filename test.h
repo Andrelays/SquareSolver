@@ -7,7 +7,7 @@
 #ifndef TEST_H_INCLUDED
 #define TEST_H_INCLUDED
 
-#include "SquareSolver.h"
+#include "square_solver.h"
 
 /*!
 Функция, вызываемая в main.cpp, чтобы протестировать программу для решения квадратных уравнений, вызывает функции check_isopen, test_equasion и read_test.

@@ -3,7 +3,7 @@
 \brief Основная программа
 */
 
-#include "SquareSolver.h"
+#include "test.h"
 
 //#define _TX_ALLOW_TRACE 9
 //#define TEST // -DTEST

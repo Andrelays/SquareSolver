@@ -62,7 +62,7 @@ solutions solve_square (const double coefficients[], double * x_1, double * x_2)
     else
     {
         double sqrt_discriminant = sqrt (discriminant);
-        *x_1 = (-b - sqrt_discriminant ) / (2 * a);   //TODO make var-
+        *x_1 = (-b - sqrt_discriminant ) / (2 * a);  
         *x_2 = (-b + sqrt_discriminant ) / (2 * a);
         return TWO_SOLUTION;
     }

@@ -5,7 +5,7 @@
 
 #include "SquareSolver.h"
 
-bool check_zero (double number) // TODO bool-
+bool check_zero (double number)
 {
     MYASSERT(isfinite(number), NON_FINITE_NUM_PASSED_TO_FUNC, return false);
 

@@ -9,7 +9,7 @@ void input_data (double coefficients[])
 {
     MYASSERT(coefficients != NULL, NULL_POINTER_PASSED_TO_FUNC, return);
 
-    int consent = 0, index = 0;  // TODO naming-
+    int consent = 0, index = 0;  
     printf ("Введите коэффиценты квадратного уравнения вида: A*x^2+B*x+C = 0\n");
     printf ("Коэффицентами могут быть числа с плавающей точкой. Пример коэффицентов: 121 или 567.7 \n");
     do
@@ -39,7 +39,7 @@ double get_coefficent (int index)
 
         flush_buffer ();
 
-        if (isinf(coefficient)) // TODO is_inf-
+        if (isinf(coefficient)) 
             printf ("ОШИБКА! Значение коэффицента %c слишком велико по абсолютной величине.\n", 'A' + index);
 
         printf ("Введите коэффицент %c = ", 'A' + index);

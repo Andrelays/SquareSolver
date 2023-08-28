@@ -16,4 +16,4 @@ void release()
     number_solutions = solve_equasion (coefficients, &x_1, &x_2);
 
     output_data(x_1, x_2, number_solutions);
-}  // TODO space-
+} 

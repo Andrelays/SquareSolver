@@ -142,6 +142,18 @@ void test_equasion (const double coefficients[], double x_1_correct, double x_2_
 solutions read_test (double coefficients[], double * x_1_correct, double * x_2_correct, FILE * file_pointer);
 
 /*!
+Функция, вызываемая в функции test_equasion. Вызывается для сравнения данных, считанных из файла с данными полученными после выполнения программы.
+\param[in] x_1_correct Правильное значение 1 корня квадратного уравнения
+\param[in] x_2_correct Правильное значение 2 корня квадратного уравнения
+\param[in] number_solutions_correct Правильное значение количества корней
+\param[in] x_1 Значение 1 корня, полученное после теста
+\param[in] x_2 Значение 2 корня, полученное после теста
+\param[in] number_solutions Количетсво корней, полученное после теста 
+\return false, если данные не равны, иначе true
+*/
+bool compare_test_result (double x_1_correct, double x_2_correct, enum solutions number_solutions_correct, enum solutions number_solutions, double x_1, double x_2);
+
+/*!
 Функция, вызываемая в функции test_equasion. Вызывается в случае, если тест провален, печатает данные проваленого теста, его номер, коэффиценты и ожидаемые данные.
 \param[out] coefficients[] Массив, содержащий 3 коэффицента крвадратного уравнения
 \param[out] x_1_correct Правильное значение 1 корня квадратного уравнения

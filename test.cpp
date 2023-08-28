@@ -6,7 +6,7 @@
 #include "SquareSolver.h"
 
 void test()
-{//argc argv
+{
     const char file_name[] = "data.txt";
 
     FILE * file_pointer = check_isopen (file_name);
@@ -45,7 +45,7 @@ void test_equasion (const double coefficients[], double x_1_correct, double x_2_
 
     number_solutions = solve_equasion (coefficients, &x_1, &x_2);
 
-    if (compare_number(x_1, x_1_correct) != EQUAL || compare_number(x_2, x_2_correct) != EQUAL || number_solutions_correct != number_solutions)      //todo compare test result
+    if (!compare_test_result (x_1_correct, x_2_correct, number_solutions_correct, number_solutions, x_1, x_2))
         print_test_failed (coefficients, x_1_correct, x_2_correct, number_solutions_correct, index_test, number_solutions, x_1, x_2);
 
     else
@@ -62,11 +62,18 @@ solutions read_test (double coefficients[], double * x_1_correct, double * x_2_c
 
     enum solutions number_solutions_correct = NOT_VALID;
 
-    fscanf(file_pointer, " COEFF %lg%lg%lg", &coefficients[0], &coefficients[1], &coefficients[2]);
-    fscanf(file_pointer, " ROOTS %lg%lg", x_1_correct, x_2_correct);
-    fscanf(file_pointer, " SOLUTIONS %d", (int*)&number_solutions_correct);
+    fscanf(file_pointer, " COEFF %lg%lg%lg ROOTS %lg%lg SOLUTIONS %d", &coefficients[0], &coefficients[1], &coefficients[2], x_1_correct, x_2_correct, (int*)&number_solutions_correct);
 
     return number_solutions_correct;
+}
+
+bool compare_test_result (double x_1_correct, double x_2_correct, enum solutions number_solutions_correct, enum solutions number_solutions, double x_1, double x_2)
+{
+    if (compare_number(x_1, x_1_correct) != EQUAL || compare_number(x_2, x_2_correct) != EQUAL || number_solutions_correct != number_solutions)
+        return 0;
+
+    else
+        return 1;
 }
 
 void print_test_failed (const double coefficients[], double x_1_correct, double x_2_correct, enum solutions number_solutions_correct, int index_test, enum solutions number_solutions, double x_1, double x_2)

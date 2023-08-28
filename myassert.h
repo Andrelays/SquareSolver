@@ -6,6 +6,9 @@
 #ifndef MYASSERT_H_INCLUDED
 #define MYASSERT_H_INCLUDED
 
+//#define DEBUG
+
+#ifdef DEBUG
 /// Макрос, используемый для нахождения логических ошибкок, похож на assert, но в случае ошибки завершает функцию, а не программу, печатает файл, строку, функцию, в которой произошла ошибка и номер ошибки
 #define MYASSERT(condition, error_code, finish)                                                                     \
  do {                                                                                                               \
@@ -17,6 +20,11 @@
         finish;                                                                                                     \
     }                                                                                                               \
 }  while(0)
+
+#else
+#define MYASSERT(condition, error_code, finish)
+
+#endif
 
 /// Список возможных ошибок, которые печатает MYASSERT
 enum errors_code {

@@ -9,9 +9,10 @@ void release()
 {
     double coefficients[] = {NAN, NAN, NAN}; // в массив поступают коэффиценты квадратного уравнения
     double x_1 = NAN, x_2 = NAN;
-    enum solutions number_solutions = NOT_VALID;
 
     input_data (coefficients);
+
+    solutions number_solutions = NOT_VALID;
 
     number_solutions = solve_equasion (coefficients, &x_1, &x_2);
 

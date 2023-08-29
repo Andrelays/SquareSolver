@@ -36,7 +36,7 @@ FILE * check_isopen (const char file_name[])
     FILE * file_pointer = NULL;
 
     if ((file_pointer = fopen (file_name, "r")) == NULL || ferror (file_pointer)) // todo func, check isopen-
-        printf("ОШИБКА! Не удалось открыть файл \"%s\"!\n", file_name);
+        printf("MISTAKE! Could not open the file \"%s\"!\n", file_name);
 
     return file_pointer;
 }

@@ -13,24 +13,24 @@ void output_data (double x_1, double x_2, enum solutions number_solutions)
     switch (number_solutions)
     {
         case INFINITELY:
-            printf ("Уравнение имеет бесконечно много корней\n");
+            printf ("The equation has infinitely many roots\n");
             break;
 
         case NO_SOLUTION:
-            printf ("Действительных корней нет\n");
+            printf ("There are no valid roots\n");
             break;
 
         case ONE_SOLUTION:
-            printf ("Данное уравнение имеет 1 корень: %g\n", x_1);
+            printf ("This equation has 1 root: %g\n", x_1);
             break;
 
         case TWO_SOLUTION:
-            printf ("Данное уравнение имеет 2 корня: %g и %g\n", x_1, x_2);
+            printf ("This equation has 2 roots: %g и %g\n", x_1, x_2);
             break;
 
         case NOT_VALID:
 
         default:
-            printf("ОШИБКА! Получено неправильное значение\n");
+            printf("MISTAKE! Incorrect value received\n");
     }
 }

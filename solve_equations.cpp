@@ -8,15 +8,15 @@
 
 solutions solve_equasion (const double coefficients[], double * x_1, double * x_2)
 {
-    MYASSERT(coefficients != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[0]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[1]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[2]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_1 != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_2 != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_2 != x_1, EQUAL_POINTERS_PASSED_TO_FUNC, return NOT_VALID);
+    MYASSERT(coefficients != NULL,      NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(isfinite(coefficients[0]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(isfinite(coefficients[1]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(isfinite(coefficients[2]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(x_1 != NULL,               NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(x_2 != NULL,               NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(x_2 != x_1,                EQUAL_POINTERS_PASSED_TO_FUNC,  return NOT_VALID);
 
-    if (!check_zero(coefficients[0]))//старший коэффицент не 0          / TODO split into functions-
+    if (!check_zero(coefficients[0]))//старший коэффицент не 0
         return solve_square (coefficients, x_1, x_2);
 
     else
@@ -33,13 +33,13 @@ solutions solve_equasion (const double coefficients[], double * x_1, double * x_
 
 solutions solve_square (const double coefficients[], double * x_1, double * x_2)
 {
-    MYASSERT(coefficients != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[0]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[1]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[2]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_1 != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_2 != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_2 != x_1, EQUAL_POINTERS_PASSED_TO_FUNC, return NOT_VALID);
+    MYASSERT(coefficients != NULL,      NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(isfinite(coefficients[0]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(isfinite(coefficients[1]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(isfinite(coefficients[2]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(x_1 != NULL,               NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(x_2 != NULL,               NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(x_2 != x_1,                EQUAL_POINTERS_PASSED_TO_FUNC,  return NOT_VALID);
 
     double a = coefficients[0],
            b = coefficients[1],
@@ -70,13 +70,13 @@ solutions solve_square (const double coefficients[], double * x_1, double * x_2)
 
 solutions solve_linear (const double coefficients[], double * x_1, double * x_2)
 {
-    MYASSERT(coefficients != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[0]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[1]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(isfinite(coefficients[2]), NON_FINITE_NUM_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_1 != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_2 != NULL, NULL_POINTER_PASSED_TO_FUNC, return NOT_VALID);
-    MYASSERT(x_2 != x_1, EQUAL_POINTERS_PASSED_TO_FUNC, return NOT_VALID);
+    MYASSERT(coefficients != NULL,      NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(isfinite(coefficients[0]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(isfinite(coefficients[1]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(isfinite(coefficients[2]), NON_FINITE_NUM_PASSED_TO_FUNC,  return NOT_VALID);
+    MYASSERT(x_1 != NULL,               NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(x_2 != NULL,               NULL_POINTER_PASSED_TO_FUNC,    return NOT_VALID);
+    MYASSERT(x_2 != x_1,                EQUAL_POINTERS_PASSED_TO_FUNC,  return NOT_VALID);
 
     double b = coefficients[1], c = coefficients[2];
 

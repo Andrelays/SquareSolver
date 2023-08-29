@@ -14,8 +14,8 @@
  do {                                                                                                               \
     if (!(condition))                                                                                               \
     {                                                                                                               \
-        printf(MAGENTA "ВНЕЗАПНО: Логическая ошибка: Код ошибки: %d\n", error_code);                                \
-        printf("Файл: %s\n" "Строка: %d\n" "Функция: %s\n" RESET_COLOR, __FILE__, __LINE__, __PRETTY_FUNCTION__);   \
+        printf(MAGENTA "suddenly: Logical error: Error code: %d\n", error_code);                                    \
+        printf("File: %s\n" "line: %d\n" "Function: %s\n" RESET_COLOR, __FILE__, __LINE__, __PRETTY_FUNCTION__);    \
                                                                                                                     \
         finish;                                                                                                     \
     }                                                                                                               \
